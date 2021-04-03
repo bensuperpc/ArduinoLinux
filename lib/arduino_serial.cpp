@@ -10,7 +10,7 @@
  */
 
 #include "arduino_serial.hpp"
-#include "arduino/lib/arduino_string.hpp"
+#include "arduino_string.hpp"
 
 void Serial_arduino::println()
 {
