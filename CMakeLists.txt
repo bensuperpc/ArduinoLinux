@@ -211,6 +211,23 @@ target_compile_options(StringComparisonOperators PRIVATE -include "arduino_compa
 target_compile_definitions(StringComparisonOperators PRIVATE FILE_ARG=tests/Strings/StringComparisonOperators.ino)
 target_link_libraries(StringComparisonOperators my_arduino)
 
+# ======== BarGraph ========
+set_source_files_properties(tests/Display/BarGraph.ino PROPERTIES LANGUAGE CXX HEADER_FILE_ONLY 1)
+add_executable(BarGraph tests/main_arduino.cpp tests/Display/BarGraph.ino)
+set_target_properties(BarGraph PROPERTIES AUTOUIC OFF AUTOMOC OFF AUTORCC OFF)
+target_compile_options(BarGraph PRIVATE -include "arduino_compatibility.hpp")
+target_compile_definitions(BarGraph PRIVATE FILE_ARG=tests/Display/BarGraph.ino)
+target_link_libraries(BarGraph my_arduino)
+
+# ======== BarGraph ========
+set_source_files_properties(tests/Display/RowColumnScanning.ino PROPERTIES LANGUAGE CXX HEADER_FILE_ONLY 1)
+add_executable(RowColumnScanning tests/main_arduino.cpp tests/Display/RowColumnScanning.ino)
+set_target_properties(RowColumnScanning PROPERTIES AUTOUIC OFF AUTOMOC OFF AUTORCC OFF)
+target_compile_options(RowColumnScanning PRIVATE -include "arduino_compatibility.hpp")
+target_compile_definitions(RowColumnScanning PRIVATE FILE_ARG=tests/Display/RowColumnScanning.ino)
+target_link_libraries(RowColumnScanning my_arduino)
+
+
 #   ================================================
 #   ================    INSTALL    =================
 #   ================================================

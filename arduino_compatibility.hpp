@@ -66,10 +66,10 @@ using String = my::String;
  * @brief Init Serial
  * 
  */
-static Serial_arduino Serial;
+inline Serial_arduino Serial;
 
-static void wdt_enable(const int value);
-static void wdt_enable(const int value)
+inline void wdt_enable(const int value);
+inline void wdt_enable(const int value)
 {
 }
 struct EEPROM
