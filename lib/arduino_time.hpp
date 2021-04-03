@@ -16,7 +16,7 @@
 #include <iostream>
 #include <thread>
 
-std::chrono::steady_clock::time_point time_start_since_launch;
+static std::chrono::steady_clock::time_point time_start_since_launch;
 
 /**
  * @brief 

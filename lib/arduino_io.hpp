@@ -12,6 +12,8 @@
 #ifndef ARDUINO_IO_HPP
 #define ARDUINO_IO_HPP
 
+#include <iostream>
+
 #define A0 0
 #define A1 1
 #define A3 3
