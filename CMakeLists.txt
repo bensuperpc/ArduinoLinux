@@ -74,7 +74,7 @@ set(HEADERS
 include_directories("${PROJECT_SOURCE_DIR}")
 include_directories("${PROJECT_SOURCE_DIR}/lib")
 
-add_library(my_arduino SHARED ${SRCS} ${HEADERS})
+add_library(my_arduino ${SRCS} ${HEADERS}) #SHARED
 set_target_properties(my_arduino PROPERTIES AUTOUIC OFF AUTOMOC OFF AUTORCC OFF)
 set_target_properties(${PROJECT_NAME} PROPERTIES
     PUBLIC_HEADER "${HEADERS}"
